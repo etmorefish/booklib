@@ -1,0 +1,35 @@
+<!-- <view wx:if="{{isHide}}">
+  <view wx:if="{{canIUse}}">
+    <view class='header'>
+      <image src='/images/wx_login.png'></image>
+    </view>
+
+    <view class='content'>
+      <view>申请获取以下权限</view>
+      <text>获得你的公开信息(昵称，头像等)</text>
+    </view>
+
+    <button class='bottom' type='primary' open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="bindGetUserInfo">
+      授权登录
+    </button>
+  </view>
+  <view wx:else>请升级微信版本</view>
+</view> -->
+
+<!-- <view wx:else> -->
+  <view class="head-img">
+    <button open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="getUserInfomation">
+      <van-image round contain width="6rem" height="6rem" src="{{avatarUrl}}" />
+    </button>
+    <view>{{nickName}}</view>
+  </view>
+  <view class="item">
+    <van-button type="primary" block bindtap="history">历史借阅</van-button>
+  </view>
+  <view class="item">
+    <van-button type="primary" block bindtap="current">查看全部</van-button>
+  </view>
+    <view class="item">
+    <van-button type="primary" block bindtap="admin">进入管理员页面</van-button>
+  </view>
+<!-- </view> -->

@@ -1,0 +1,6 @@
+/* pages/info/info.wxss */
+.img{
+    text-align: center;
+  margin-top: 50rpx;
+  margin-bottom: 50rpx;
+}

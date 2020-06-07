@@ -1,0 +1,13 @@
+<view class="img">
+<van-image width="160" height="220" src="{{book.imgurl}}" />
+</view>
+
+<van-cell title="书名" value="{{book.bookname}}" size="large" />
+<van-cell title="作者" value="{{book.author}}" size="large" />
+<van-cell title="出版社" value="{{book.publisher}}" size="large" />
+<van-cell title="豆瓣评分" value="{{book.rating_nums}}" size="large" />
+<van-cell title="价格" value="{{book.price}}" size="large" />
+<van-cell title="藏书库存" value="{{book.total}}" size="large" />
+<van-button type="primary" data-id="{{ book._id }}"   block bindtap="order">马上借阅</van-button>
+
+<van-toast id="van-toast" />

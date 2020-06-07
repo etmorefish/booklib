@@ -1,0 +1,7 @@
+<!--pages/history/history.wxml-->
+<van-toast id="van-toast" />
+
+<block wx:for="{{hbook}}" >
+<van-cell title="书名" data-id="{{item._id}}" value="{{item.bookname}}"  bind:click="up"  size="large" label="时间：{{item.time}}天" />
+    <van-button  data-id="{{ item._id }}"  size="small" type="primary"  plain bind:click="del">还书</van-button>
+</block>

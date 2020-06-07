@@ -1,0 +1,29 @@
+<van-search
+  value="{{ value }}"
+  label="图书"
+  placeholder="请输入搜索关键词"
+  use-action-slot
+  bind:change="onChange"
+  bind:search="onSearch"
+>
+  <view slot="action" bind:tap="onClick">搜索</view>
+</van-search>
+
+<van-toast id="van-toast" />
+
+<block wx:for="{{books}}">
+<van-card
+  num="剩余{{item.total}}"
+  price="{{item.price}}"
+  desc="{{item.publisher}}"
+  title="{{item.bookname}}"
+  thumb="{{ item.imgurl }}"
+>
+  <view slot="footer">
+    <van-button  data-id="{{ item._id }}"  size="small" type="primary"  plain bind:click="viewItem">详情</van-button>
+    <van-button  data-id="{{ item._id }}"  size="small" type="primary"  plain bind:click="del">删除</van-button>
+
+    <!-- <van-button size="mini">按钮</van-button> -->
+  </view>
+</van-card>
+</block>

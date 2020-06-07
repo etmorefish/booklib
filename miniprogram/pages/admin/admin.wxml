@@ -1,0 +1,14 @@
+<!--pages/admin/admin.wxml-->
+<van-cell title="管理员登录" value="请输入管理员密码" />
+  <van-field
+    value="{{ password }}"
+    type="password"
+    label="密码"
+    placeholder="请输入密码"
+    required
+    border="{{ false }}"
+    bind:input="input"
+  />
+  <van-button type="primary" block bind:click="login">登录</van-button>
+
+  <van-toast id="van-toast" />

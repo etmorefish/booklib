@@ -1,0 +1,103 @@
+<van-cell-group>
+  <van-field
+    value="{{ bookname }}"
+    required
+    clearable
+    label="书名"
+  
+    placeholder="请输入书籍名"
+    
+    bind:input="input1"
+
+  />
+  <van-field
+    value="{{ author }}"
+    required
+    clearable
+    label="作者"
+  
+    placeholder="请输入作者名"
+    
+    bind:input="input2"
+  /> 
+   <van-field
+    value="{{ info }}"
+    required
+    clearable
+    label="信息"
+  
+    placeholder="请输入书籍信息"
+    bind:input="input3"
+    
+  />
+    <van-field
+    value="{{ price }}"
+    required
+    clearable
+    label="价格"
+  
+    placeholder="请输入书籍价格"
+    bind:input="input4"
+    
+  />
+    <van-field
+    value="{{ publisher }}"
+    required
+    clearable
+    label="出版社"
+  
+    placeholder="请输入书籍出版社"
+    bind:input="input5"
+    
+  />
+    <van-field
+    value="{{ rating_nums }}"
+    required
+    clearable
+    label="评分"
+    type="number"
+    placeholder="请输入书籍评分"
+    bind:input="input6"
+    
+  />
+    <van-field
+    value="{{ total }}"
+    required
+    clearable
+    label="数量"
+    type="number"  
+    placeholder="请输入书籍数量"
+    bind:input="input7"
+    
+  />
+    <van-field
+    value="{{ imgurl }}"
+    required
+    clearable
+    label="图片"
+  
+    placeholder="请输入书籍图片链接"
+    bind:input="input8"
+    
+  />
+    <van-field
+    value="{{ translater }}"
+    clearable
+    label="译者"
+  
+    placeholder="译者"
+    bind:input="input9"
+    
+  />
+
+</van-cell-group>
+
+<van-button type="primary" size="large"  bind:click="add">添加图书</van-button>
+<van-toast id="van-toast" />
+
+<van-cell
+  is-link
+  title="删除指定图书"
+  link-type="navigateTo"
+  url="/pages/del/del"
+/>

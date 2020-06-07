@@ -1,0 +1,11 @@
+
+<block wx:for="{{books}}">
+<van-card
+  num="剩余{{item.total}}"
+  price="{{item.price}}"
+  desc="{{item.publisher}}"
+  title="{{item.bookname}}"
+  thumb="{{ item.imgurl }}"
+>
+</van-card>
+</block>
