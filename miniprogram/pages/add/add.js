@@ -1,9 +1,7 @@
 // pages/add/add.js
 import Toast from '../../miniprogram_npm/@vant/weapp/toast/toast'
-
 const db = wx.cloud.database()
 const _ = db.command
-
 const book = db.collection('library')
 
 Page({
@@ -40,10 +38,10 @@ Page({
     this.data.publisher = enevt.detail
   },
   input6: function(enevt) {
-    this.data.rating_nums = enevt.detail
+    this.data.rating_nums = Number(enevt.detail)
   },
   input7: function(enevt) {
-    this.data.total = enevt.detail
+    this.data.total = Number(enevt.detail)
   },
   input8: function(enevt) {
     this.data.imgurl = enevt.detail

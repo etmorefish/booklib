@@ -60,6 +60,9 @@ Page({
     }).then(res => {
       console.log('222'+res)
       Toast.success('借阅成功');
+      wx.navigateBack({
+        
+      })
 
     })
       .catch(console.error)

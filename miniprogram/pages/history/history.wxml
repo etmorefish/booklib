@@ -3,5 +3,9 @@
 
 <block wx:for="{{hbook}}" >
 <van-cell title="书名" data-id="{{item._id}}" value="{{item.bookname}}"  bind:click="up"  size="large" label="时间：{{item.time}}天" />
-    <van-button  data-id="{{ item._id }}"  size="small" type="primary"  plain bind:click="del">还书</van-button>
+    <view>
+    <van-button  data-id="{{ item._id }}"  size="small" type="primary"  plain bind:click="renew">续借</van-button>
+        <van-button  data-id="{{ item._id }}"  size="small" type="primary"  plain bind:click="del">还书</van-button>
+        </view>
 </block>
+<view class="section_text">下拉刷新数据</view>

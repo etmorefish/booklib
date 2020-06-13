@@ -4,11 +4,8 @@
     required
     clearable
     label="书名"
-  
     placeholder="请输入书籍名"
-    
     bind:input="input1"
-
   />
   <van-field
     value="{{ author }}"
