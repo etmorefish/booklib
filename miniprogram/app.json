@@ -7,7 +7,8 @@
     "pages/all/all",
     "pages/admin/admin",
     "pages/add/add",
-    "pages/del/del"
+    "pages/del/del",
+    "pages/like/like"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",

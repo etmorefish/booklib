@@ -68,6 +68,34 @@ Page({
       .catch(console.error)
 
   },
+  // 收藏
+  like:function(event){
+    console.log('id:' + event.currentTarget.dataset.id);
+    db.collection('blikes').add({
+      data: {
+        _id: event.currentTarget.dataset.id,
+        bookname: this.data.bookname,
+      }
+    }).then(res => {
+      console.log('333' , res)
+      Toast.success('收藏成功');
+    }).catch(
+      Toast.success('请勿重复收藏')
+      // console.error
+    )
+  },
+
+// 取消收藏
+  dislike:function(event){
+    console.log('id:' + event.currentTarget.dataset.id);
+    var id = event.currentTarget.dataset.id;
+    db.collection('blikes').doc(id).remove().then(res => {
+      Toast.success('已取消收藏');
+    }).catch(
+      Toast.success('请勿重复取消')
+
+    )
+  },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
@@ -101,6 +129,14 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
+    db.collection('blikes').get().then(res => {
+      console.log(res.data)
+      this.setData({
+        hbook: res.data
+      })
+      console.log('数据更新完成')
+      wx.stopPullDownRefresh()
+    });
 
   },
 

@@ -28,6 +28,7 @@ Page({
     });
 
   },
+  
   up: function(event) {
     let bid = event.currentTarget.dataset.id;
     console.log(bid)

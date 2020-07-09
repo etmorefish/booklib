@@ -147,6 +147,11 @@ Page({
     wx.navigateTo({
       url: '../admin/admin',
     })
+  },
+  like:function(event){
+    wx.navigateTo({
+      url: '../like/like',
+    })
   }
 
 })

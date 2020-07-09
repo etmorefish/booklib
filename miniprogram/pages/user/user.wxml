@@ -23,9 +23,13 @@
     </button>
     <view>{{nickName}}</view>
   </view>
+    <view class="item">
+      <van-button type="primary" block bindtap="like">收藏</van-button>
+  </view>
   <view class="item">
     <van-button type="primary" block bindtap="history">历史借阅</van-button>
   </view>
+
   <view class="item">
     <van-button type="primary" block bindtap="current">查看全部</van-button>
   </view>

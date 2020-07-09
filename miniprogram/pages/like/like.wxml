@@ -1,0 +1,16 @@
+<!--pages/history/history.wxml-->
+<van-toast id="van-toast" />
+
+<block wx:for="{{hbook}}" >
+<!-- <van-cell title="书名" data-id="{{item._id}}" value="{{item.bookname}}"  bind:click="up"  size="large" /> -->
+
+<van-cell
+  is-link
+  title="{{item.bookname}}"
+  data-id="{{item._id}}"
+  bind:click="info"
+
+/>
+</block>
+<view class="section_text">下拉刷新数据</view>
+

@@ -1,0 +1,9 @@
+/* pages/like/like.wxss */
+.section_text {
+  position: fixed;
+  text-align: center;
+  bottom: 30rpx;
+  left: 0;
+  right: 0;
+  font-size: 15rpx;
+}

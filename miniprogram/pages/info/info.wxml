@@ -8,6 +8,18 @@
 <van-cell title="豆瓣评分" value="{{book.rating_nums}}" size="large" />
 <van-cell title="价格" value="{{book.price}}" size="large" />
 <van-cell title="藏书库存" value="{{book.total}}" size="large" />
+
+<van-row gutter="5">
+  <van-col span="12">
+    <van-button type="warning" data-id="{{ book._id }}"   block bindtap="dislike">取消收藏</van-button>
+
+  </van-col>
+  <van-col span="12">
+  <van-button type="info" data-id="{{ book._id }}"   block bindtap="like">收藏</van-button>
+  </van-col>
+</van-row>
+<!-- <van-button type="info" data-id="{{ book._id }}"   block bindtap="like">收藏</van-button> -->
+
 <van-button type="primary" data-id="{{ book._id }}"   block bindtap="order">马上借阅</van-button>
 
 <van-toast id="van-toast" />
